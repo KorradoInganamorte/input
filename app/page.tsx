@@ -57,7 +57,7 @@ export default function Home() {
           Text to display
         </h1>
 
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col items-center gap-2">
           <input
             ref={fileInputRef}
             type="file"
@@ -70,8 +70,9 @@ export default function Home() {
             onClick={handlePasteClick}
             className="w-full px-4 py-3 rounded-lg border-2 border-dashed border-slate-300 dark:border-gray-900 bg-white dark:bg-slate-900 text-slate-900 dark:text-gray-500 hover:border-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 dark:hover:border-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-500 font-medium transition-colors"
           >
-            Paste image or choose file
+            📷
           </button>
+          {/* <p className="text-gray-500 text-sm">(Paste image or choose file)</p> */}
         </div>
 
         <label className="block">
@@ -90,7 +91,6 @@ export default function Home() {
             <p className="text-slate-800 dark:text-slate-100 text-lg whitespace-pre-wrap wrap-break-word text-center">
               <span className="text-slate-900">. </span>
               {text}
-              <span className="text-slate-900"> .</span>
             </p>
           ) : (
             <p className="text-gray-500 dark:text-gray-500 text-sm">
