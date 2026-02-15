@@ -53,38 +53,8 @@ export default function Home() {
     } catch {}
   };
 
-  const handlePasteClick = async () => {
-    try {
-      const items = await navigator.clipboard.read();
-
-      for (const item of items) {
-        if (item.types.includes("image/png")) {
-          const blob = await item.getType("image/png");
-          const url = URL.createObjectURL(blob);
-
-          setPastedImage(url);
-          await navigator.clipboard.write([new ClipboardItem({ "image/png": blob })]);return;
-        }
-        if (item.types.includes("image/jpeg")) {
-          const blob = await item.getType("image/jpeg");
-          const url = URL.createObjectURL(blob);
-
-          setPastedImage(url);
-          await navigator.clipboard.write([new ClipboardItem({ "image/jpeg": blob })]); return;
-        }
-        if (item.types.includes("image/webp")) {
-          const blob = await item.getType("image/webp");
-          const url = URL.createObjectURL(blob);
-
-          setPastedImage(url);
-          await navigator.clipboard.write([new ClipboardItem({ "image/webp": blob })]); return;
-        }
-      }
-
-      fileInputRef.current?.click();
-    } catch {
-      fileInputRef.current?.click();
-    }
+  const handlePasteClick = () => {
+    fileInputRef.current?.click();
   };
 
   const writeImageToClipboard = (file: File) => {
