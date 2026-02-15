@@ -54,7 +54,7 @@ export default function Home() {
     <div className="min-h-screen bg-slate-100 dark:bg-gray-950 flex flex-col items-center justify-center p-6">
       <div className="w-full max-w-xl space-y-6">
         <h1 className="text-2xl font-semibold text-slate-800 dark:text-slate-100 text-center">
-          Text to display.
+          Text to display
         </h1>
 
         <div className="flex flex-col gap-2">
@@ -88,9 +88,9 @@ export default function Home() {
         <div className="rounded-xl border-2 border-dashed border-slate-300 dark:border-gray-900 bg-white dark:bg-slate-900 shadow-sm min-h-[100px] p-6 flex items-center justify-center">
           {text ? (
             <p className="text-slate-800 dark:text-slate-100 text-lg whitespace-pre-wrap wrap-break-word text-center">
-              <span className="hidden">.</span>
+              <span className="text-slate-900">. </span>
               {text}
-              <span className="hidden">.</span>
+              <span className="text-slate-900"> .</span>
             </p>
           ) : (
             <p className="text-gray-500 dark:text-gray-500 text-sm">
